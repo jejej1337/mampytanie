@@ -6,40 +6,60 @@
 body {
   margin: 0;
   height: 100vh;
+  overflow: hidden;
   background: linear-gradient(180deg, #ffd6e0, #fff0f5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-/* center like mobile app */
+/* PNGy w tle – lekkie unoszenie */
+.bg-gifs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.gif {
+  position: absolute;
+  opacity: 0.85;
+  animation: float 8s ease-in-out infinite;
+  width: 120px;
+}
+
+.gif1 { top: 10%; left: 8%; animation-delay: 0s; }
+.gif2 { top: 25%; right: 12%; animation-delay: 2s; }
+.gif3 { bottom: 10%; left: 30%; animation-delay: 4s;}
+
+@keyframes float {
+  0% { transform: translateY(0px); opacity: 0.8;}
+  50% { transform: translateY(-20px); opacity: 1;}
+  100% { transform: translateY(0px); opacity: 0.8;}
+}
+
+/* kontener jak app */
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+  pointer-events: auto;
 }
 
-/* card like in reels */
+/* card */
 .card {
-  width: 330px;
+  width: 340px;
   padding: 32px 24px;
-  background: white;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
   border-radius: 28px;
   text-align: center;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
   animation: fadeIn 0.8s ease;
+  position: relative;
 }
 
-/* soft enter */
 @keyframes fadeIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
 }
 
 .heart {
@@ -59,9 +79,7 @@ h1 {
   line-height: 1.2;
 }
 
-h1 span {
-  color: #ff4d6d;
-}
+h1 span { color: #ff4d6d; }
 
 .subtitle {
   font-size: 14px;
@@ -69,7 +87,7 @@ h1 span {
   margin-bottom: 26px;
 }
 
-/* buttons */
+/* yes / no */
 button {
   width: 100%;
   padding: 14px;
@@ -95,4 +113,11 @@ button:active {
   margin-top: 12px;
   background: #f2f2f2;
   color: #888;
+}
+
+/* KONFETTI canvas */
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
 }
