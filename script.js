@@ -20,7 +20,7 @@ function escape() {
   if (tries === 3) noBtn.innerText = "Czemu chcesz mnie kliknąć????";
   if (tries === 5) noBtn.innerText = "I tak klikniesz Tak";
   if (tries === 7) noBtn.innerText = "Nie ma szans, nie próbuj";
-  if (tries === 9) noBtn.innerText = "Mówiłem🤭🤭🤭, teraz nie masz wyjścia❤️";
+  if (tries === 9) noBtn.innerText = "Mówiłem, teraz nie masz wyjścia❤️";
 
   if (tries >= MAX_TRIES) {
     noBtn.style.transition = "opacity 0.8s ease, transform 0.8s ease";
@@ -143,6 +143,7 @@ function drawConfetti() {
 
   requestAnimationFrame(drawConfetti);
 }
+
 
 
 
