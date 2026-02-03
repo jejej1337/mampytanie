@@ -13,22 +13,22 @@ function escape() {
   noBtn.style.left = `${x}px`;
   noBtn.style.top = `${y}px`;
 
-  yesBtn.style.transform = `scale(${1 + noClicks * 0.15})`;
+  yesBtn.style.transform = `scale(${1 + noClicks * 0.12})`;
 
-  if (noClicks > 4) {
-    noBtn.innerText = "This is pointless 😅";
+  if (noClicks > 3) {
+    noBtn.innerText = "Nice try 😅";
   }
 }
 
 function accept() {
   document.body.innerHTML = `
     <div class="card">
-      <h1>YAY!!! 💖</h1>
+      <div class="top-heart">💘</div>
+      <h1>YAY! 🥹</h1>
       <p class="text">
-        You just made me<br>
-        the happiest person today 🥹<br><br>
-        Officially:<br>
-        💘 My Valentine 💘
+        You just became<br>
+        my official Valentine 💖<br><br>
+        Thank you for being you.
       </p>
     </div>
   `;
