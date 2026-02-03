@@ -1,5 +1,5 @@
 let tries = 0;
-const MAX_TRIES = 10; // ile razy ma uciec zanim zniknie
+const MAX_TRIES = 10; 
 
 function escape() {
   const noBtn = document.querySelector(".no-btn");
@@ -8,7 +8,7 @@ function escape() {
 
   tries++;
 
-  // losowa pozycja (żeby nie wychodził poza ekran)
+  
   const x = Math.random() * (window.innerWidth - 160);
   const y = Math.random() * (window.innerHeight - 80);
 
@@ -16,16 +16,16 @@ function escape() {
   noBtn.style.left = `${Math.max(10, x)}px`;
   noBtn.style.top = `${Math.max(10, y)}px`;
 
-  // TAK rośnie powoli
+  
   yesBtn.style.transform = `scale(${1 + tries * 0.1})`;
 
-  // zmieniające się teksty (Twoje)
+  
   if (tries === 3) noBtn.innerText = "Czemu chcesz mnie kliknąć????";
   if (tries === 5) noBtn.innerText = "Serio poddaj się";
   if (tries === 7) noBtn.innerText = "Nie ma szans, nie próbuj";
   if (tries === 9) noBtn.innerText = "Mówiłem🤭🤭🤭, teraz nie masz wyjścia❤️";
 
-  // po długim czasie: znikanie
+  
   if (tries >= MAX_TRIES) {
     noBtn.style.transition = "opacity 0.8s ease, transform 0.8s ease";
     noBtn.style.opacity = "0";
@@ -35,10 +35,10 @@ function escape() {
 }
 
 function accept() {
-  startConfetti(); // teraz już istnieje
+  startConfetti(); 
 
-  // działa zarówno gdy masz .center (minimalistyczny układ),
-  // jak i gdybyś wrócił do .card
+  
+  
   const target = document.querySelector(".center") || document.querySelector(".card");
   if (!target) return;
 
@@ -53,7 +53,7 @@ function accept() {
   `;
 }
 
-/* ---------- CONFETTI (działa zawsze) ---------- */
+
 const canvas = document.getElementById("confetti");
 const ctx = canvas ? canvas.getContext("2d") : null;
 let confettiPieces = [];
@@ -84,7 +84,7 @@ function startConfetti() {
 
   requestAnimationFrame(drawConfetti);
 
-  // wyłącz po chwili
+  
   setTimeout(() => {
     confettiRunning = false;
     confettiPieces = [];
@@ -102,7 +102,7 @@ function drawConfetti() {
     p.y += p.vy;
     p.rot += p.vr;
 
-    // respawn z góry
+    
     if (p.y > canvas.height + 30) {
       p.y = -30;
       p.x = Math.random() * canvas.width;
@@ -112,7 +112,7 @@ function drawConfetti() {
     ctx.translate(p.x, p.y);
     ctx.rotate(p.rot);
 
-    // losowy kolor (HSL)
+    
     ctx.fillStyle = `hsl(${Math.random() * 360}, 85%, 60%)`;
     ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
 
@@ -121,6 +121,7 @@ function drawConfetti() {
 
   if (confettiRunning) requestAnimationFrame(drawConfetti);
 }
+
 
 
 
