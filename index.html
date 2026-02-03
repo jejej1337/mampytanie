@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zostaniesz moją walentynką?</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Be My Valentine 💘</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <div class="card">
-    <div class="heart">❤️</div>
-    <h1>Zostaniesz moją walentynką?</h1>
-    <p class="sub">
-      Obiecuję: dużo przytulasów, trochę żartów i 0 spiny 🥺👉👈
+    <div class="hearts"></div>
+
+    <h1>Will you be<br><span>my Valentine?</span> 💌</h1>
+
+    <p class="text">
+      Warning ⚠️<br>
+      This button may cause:<br>
+      smiles, hugs & butterflies 🦋
     </p>
 
-    <div class="buttons">
-      <button class="yes-button" id="yesBtn">TAK</button>
-      <button class="no-button" id="noBtn">NIE</button>
-    </div>
-
-    <p class="hint">PS: “NIE” ma dziś własne zdanie… i nogi.</p>
+    <button class="yes-btn" onclick="accept()">💖 Add to Heart</button>
+    <button class="no-btn" onclick="escape()">No 🙃</button>
   </div>
-
-  <canvas id="confetti"></canvas>
 
   <script src="script.js"></script>
 </body>
