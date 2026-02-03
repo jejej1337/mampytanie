@@ -18,7 +18,7 @@ function escape() {
   yesBtn.style.transform = `scale(${1 + tries * 0.1})`;
 
   if (tries === 3) noBtn.innerText = "Czemu chcesz mnie kliknąć????";
-  if (tries === 5) noBtn.innerText = "Serio poddaj się";
+  if (tries === 5) noBtn.innerText = "I tak klikniesz Tak";
   if (tries === 7) noBtn.innerText = "Nie ma szans, nie próbuj";
   if (tries === 9) noBtn.innerText = "Mówiłem🤭🤭🤭, teraz nie masz wyjścia❤️";
 
@@ -143,4 +143,5 @@ function drawConfetti() {
 
   requestAnimationFrame(drawConfetti);
 }
+
 
