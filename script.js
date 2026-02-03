@@ -1,35 +1,37 @@
-let noClicks = 0;
+let tries = 0;
 
 function escape() {
   const noBtn = document.querySelector(".no-btn");
   const yesBtn = document.querySelector(".yes-btn");
 
-  noClicks++;
+  tries++;
 
-  const x = Math.random() * (window.innerWidth - 120);
-  const y = Math.random() * (window.innerHeight - 50);
+  const x = Math.random() * (window.innerWidth - 140);
+  const y = Math.random() * (window.innerHeight - 60);
 
   noBtn.style.position = "fixed";
   noBtn.style.left = `${x}px`;
   noBtn.style.top = `${y}px`;
 
-  yesBtn.style.transform = `scale(${1 + noClicks * 0.12})`;
+  yesBtn.style.transform = `scale(${1 + tries * 0.12})`;
 
-  if (noClicks > 3) {
-    noBtn.innerText = "Nice try 😅";
+  if (tries > 3) {
+    noBtn.innerText = "Not an option 😌";
   }
 }
 
 function accept() {
   document.body.innerHTML = `
-    <div class="card">
-      <div class="top-heart">💘</div>
-      <h1>YAY! 🥹</h1>
-      <p class="text">
-        You just became<br>
-        my official Valentine 💖<br><br>
-        Thank you for being you.
-      </p>
+    <div class="container">
+      <div class="card">
+        <div class="heart">💘</div>
+        <h1>Yay!</h1>
+        <p class="subtitle">
+          You are officially<br>
+          my Valentine ❤️<br><br>
+          See you for hugs soon.
+        </p>
+      </div>
     </div>
   `;
 }
