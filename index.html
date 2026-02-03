@@ -8,6 +8,13 @@
 </head>
 <body>
 
+  <!-- GIFy w tle -->
+  <div class="bg-gifs">
+    <img src="https://media.giphy.com/media/qFmdpUKAFZ6rMobzzu/giphy.gif" class="gif gif1">
+    <img src="https://media.giphy.com/media/f9EmXxglhdhAj1bo28/giphy.gif" class="gif gif2">
+    <img src="https://media.giphy.com/media/KmxmoHUGPDjfQXqGgv/giphy.gif" class="gif gif3">
+  </div>
+
   <div class="container">
     <div class="card">
       <div class="heart">❤️</div>
@@ -16,13 +23,15 @@
 
       <p class="subtitle">
         Limited edition invitation 💌<br>
-        No refunds, only love.
+        Looks cute, right?!
       </p>
 
       <button class="yes-btn" onclick="accept()">Add to heart 💖</button>
       <button class="no-btn" onmouseover="escape()">No</button>
     </div>
   </div>
+
+  <canvas id="confetti"></canvas>
 
   <script src="script.js"></script>
 </body>
