@@ -1,5 +1,5 @@
 let tries = 0;
-const MAX_TRIES = 10; // ile razy ma uciec zanim zniknie
+const MAX_TRIES = 10; 
 
 function escape() {
   const noBtn = document.querySelector(".no-btn");
@@ -19,10 +19,10 @@ function escape() {
   yesBtn.style.transform = `scale(${1 + tries * 0.1})`;
 
   // zmieniające się teksty
-  if (tries === 3) noBtn.innerText = "Ej no 😳";
-  if (tries === 5) noBtn.innerText = "Serio mnie gonisz? 😭";
-  if (tries === 7) noBtn.innerText = "Dobra, poddaję się 😩";
-  if (tries === 9) noBtn.innerText = "OK… już idę 😔";
+  if (tries === 3) noBtn.innerText = "Czemu chczesz mnie kliknąć????";
+  if (tries === 5) noBtn.innerText = "Serio nie chcesz mnie klikać";
+  if (tries === 7) noBtn.innerText = "Nie ma szans, nie próbuj";
+  if (tries === 9) noBtn.innerText = "Mówiłem🤭🤭🤭, teraz nie masz wyjścia❤️";
 
   // po długim czasie: znikanie
   if (tries >= MAX_TRIES) {
@@ -38,10 +38,10 @@ function accept() {
 
   document.querySelector(".card").innerHTML = `
     <div class="heart">💘</div>
-    <h1>YAY! 🥹</h1>
+    <h1>TAAAAAK!!!🥹</h1>
     <p class="subtitle">
-      You are officially<br>
-      my Valentine ❤️
+      Oficjalnie zostałaś<br>
+      MOJĄ WALENTYNKĄ!💞
     </p>
   `;
 }
@@ -59,3 +59,4 @@ window.addEventListener("resize", resize);
 resize();
 
 func
+
