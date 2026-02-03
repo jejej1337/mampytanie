@@ -42,7 +42,7 @@ function accept() {
     <p style="margin: 0; color:#444; font-size:14px;">
       Oficjalnie zostałaś<br>
       <b>MOJĄ WALENTYNKĄ💞💞💞</b><br>
-      Widzimy się na randeczce, Kocham Cię!😽😽
+      Widzimy się na randeczce, Kocham Cię Kinga!😽😽
     </p>
   `;
 }
@@ -143,3 +143,4 @@ function drawConfetti() {
 
   requestAnimationFrame(drawConfetti);
 }
+
