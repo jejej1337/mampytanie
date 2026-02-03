@@ -20,7 +20,7 @@ function escape() {
 
   // zmieniające się teksty
   if (tries === 3) noBtn.innerText = "Czemu chczesz mnie kliknąć????";
-  if (tries === 5) noBtn.innerText = "Serio nie chcesz mnie klikać";
+  if (tries === 5) noBtn.innerText = "Serio poddaj się";
   if (tries === 7) noBtn.innerText = "Nie ma szans, nie próbuj";
   if (tries === 9) noBtn.innerText = "Mówiłem🤭🤭🤭, teraz nie masz wyjścia❤️";
 
@@ -59,4 +59,5 @@ window.addEventListener("resize", resize);
 resize();
 
 func
+
 
