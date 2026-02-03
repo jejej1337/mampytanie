@@ -34,7 +34,7 @@ function escape() {
 }
 
 function accept() {
-  startConfetti();
+  if (typeof startConfetti === "function") startConfetti();
 
   document.querySelector(".card").innerHTML = `
     <div class="heart">💘</div>
@@ -59,5 +59,6 @@ window.addEventListener("resize", resize);
 resize();
 
 func
+
 
 
