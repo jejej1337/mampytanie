@@ -38,7 +38,7 @@ function accept() {
 
   target.innerHTML = `
     <div class="emoji">💘</div>
-    <h1>TAAAAAK!!!🥹<br><span>JESTEM NAJSZCZĘŚLIWSZYM CZŁOWIEKIEM NA ZIEMI!!!!</span></h1>
+    <h1>TAAAAAK!!!🥹<br><span>JESTEM ULTRA HAPI!!!!!</span></h1>
     <p style="margin: 0; color:#444; font-size:14px;">
       Oficjalnie zostałaś<br>
       <b>MOJĄ WALENTYNKĄ💞💞💞</b><br>
@@ -143,5 +143,6 @@ function drawConfetti() {
 
   requestAnimationFrame(drawConfetti);
 }
+
 
 
